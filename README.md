@@ -4,7 +4,7 @@ This repository contains formulas for installing aiken's projects using [Homebre
 
 ## Installing
 
-To fetch the tap, just run `brew tap aiken-lang/homebrew-tap`. You can also just install any Axo project by name:
+To fetch the tap, just run `brew tap aiken-lang/homebrew-tap`. You can also just install any Aiken project by name:
 
 ```sh
 brew install aiken-lang/homebrew-tap/aikup
