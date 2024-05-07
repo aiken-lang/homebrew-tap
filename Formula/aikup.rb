@@ -1,21 +1,21 @@
 class Aikup < Formula
   desc "Manage multiple versions of aiken"
   homepage "https://aiken-lang.org"
-  version "0.0.4"
+  version "0.0.5"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/aiken-lang/aikup/releases/download/v0.0.4/aikup-aarch64-apple-darwin.tar.gz"
-      sha256 "4d08d2d67ec239f12076ea32c5fb4d8d69dc91dfbe6948863f94ccd9fc8914d3"
+      url "https://github.com/aiken-lang/aikup/releases/download/v0.0.5/aikup-aarch64-apple-darwin.tar.gz"
+      sha256 "bdf31c1ebb17c9e125f6e8dec8ad030cef08925a07b44a543538e37aba7b3952"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/aiken-lang/aikup/releases/download/v0.0.4/aikup-x86_64-apple-darwin.tar.gz"
-      sha256 "710e040b6a569913263ece0584514acdc686dc1a69042ccb96933b4686b0ca64"
+      url "https://github.com/aiken-lang/aikup/releases/download/v0.0.5/aikup-x86_64-apple-darwin.tar.gz"
+      sha256 "d784175c57cac47de9c0f648daf540a8db0974dc2a93298c60ce1536a3d5fecc"
     end
   end
   if OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/aiken-lang/aikup/releases/download/v0.0.4/aikup-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "7c25e26c0ac259659800642c43f9d37367d6be660a963b99f4c812125da48491"
+      url "https://github.com/aiken-lang/aikup/releases/download/v0.0.5/aikup-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "68ee7944d2644c4aa996a2804c4e03a3cbb289b3b260a164892985cbfb90e7b3"
     end
   end
   license "Apache-2.0"
