@@ -1,20 +1,20 @@
 class Aiken < Formula
   desc "Cardano smart contract language and toolchain"
   homepage "https://github.com/aiken-lang/aiken"
-  version "1.1.6"
+  version "1.1.7"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/aiken-lang/aiken/releases/download/v1.1.6/aiken-aarch64-apple-darwin.tar.gz"
-      sha256 "32cbb26c1966960f3957bed07c73cadc7252d23490f5c0bdd4921f48ce66115b"
+      url "https://github.com/aiken-lang/aiken/releases/download/v1.1.7/aiken-aarch64-apple-darwin.tar.gz"
+      sha256 "268c185a6f52f8a169c16f570ead0833d582c337ccad45cd4f6bbeb4d7c9da16"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/aiken-lang/aiken/releases/download/v1.1.6/aiken-x86_64-apple-darwin.tar.gz"
-      sha256 "609ca3ba330750e1406cbb1c1fbf78dcea215ab6a6de8901c5693ebda2f0eec8"
+      url "https://github.com/aiken-lang/aiken/releases/download/v1.1.7/aiken-x86_64-apple-darwin.tar.gz"
+      sha256 "2d3be9d68ed187d0c94023436b0f1841cd346e2e4d13d1fd712260003a022445"
     end
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/aiken-lang/aiken/releases/download/v1.1.6/aiken-x86_64-unknown-linux-musl.tar.gz"
-    sha256 "14529a11704dfb665589b7063120fab74e064e47e9d9f0647554a193bfa6edc9"
+    url "https://github.com/aiken-lang/aiken/releases/download/v1.1.7/aiken-x86_64-unknown-linux-musl.tar.gz"
+    sha256 "f9047ff063f1f9f914fb92c32f7d56c73e5b4a3e173961b548b5609d92121a95"
   end
   license "Apache-2.0"
 
