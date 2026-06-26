@@ -1,40 +1,40 @@
 class Aiken < Formula
   desc "Cardano smart contract language and toolchain"
   homepage "https://github.com/aiken-lang/aiken"
-  version "1.1.22"
+  version "1.1.23"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/aiken-lang/aiken/releases/download/v1.1.22/aiken-aarch64-apple-darwin.tar.gz"
-      sha256 "9b271bc2efc991a4fd3ec7c24d36b1c654621670903a731fc68a8251443d1de8"
+      url "https://github.com/aiken-lang/aiken/releases/download/v1.1.23/aiken-aarch64-apple-darwin.tar.gz"
+      sha256 "6c03b072a599e1899accf7666c46f2d811d56d4605f9bb097aff38047ce8fa02"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/aiken-lang/aiken/releases/download/v1.1.22/aiken-x86_64-apple-darwin.tar.gz"
-      sha256 "e1f652c2e78df264da0b547bc6e4d470d1d42a6e3f248ccd5df95f2ac79011cb"
+      url "https://github.com/aiken-lang/aiken/releases/download/v1.1.23/aiken-x86_64-apple-darwin.tar.gz"
+      sha256 "78f1c962e213addd786664cdf5c279292448332bc78f5728740419b20c840c63"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/aiken-lang/aiken/releases/download/v1.1.22/aiken-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "2ad7e407131bf51d059a9365b1c63320697e3fe8b170af673d20a1b7280b21e6"
+      url "https://github.com/aiken-lang/aiken/releases/download/v1.1.23/aiken-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "72a40b4e1b8e2219c4d655590d6a6e868d858386db780a36971bd3aaf4d89290"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/aiken-lang/aiken/releases/download/v1.1.22/aiken-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "d443f9deab109fd75ae19e22f7dfce4cdd2f70b3f68c152a6a23db6bc1ea76e1"
+      url "https://github.com/aiken-lang/aiken/releases/download/v1.1.23/aiken-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "b98c4ccbada5e35f15ba417a52872aeaf0c65998aed77351769ce5fd2506b570"
     end
   end
   license "Apache-2.0"
 
   BINARY_ALIASES = {
-    "aarch64-apple-darwin":               {},
-    "aarch64-unknown-linux-gnu":          {},
+    "aarch64-apple-darwin": {},
+    "aarch64-unknown-linux-gnu": {},
     "aarch64-unknown-linux-musl-dynamic": {},
-    "aarch64-unknown-linux-musl-static":  {},
-    "x86_64-apple-darwin":                {},
-    "x86_64-pc-windows-gnu":              {},
-    "x86_64-unknown-linux-gnu":           {},
-    "x86_64-unknown-linux-musl-dynamic":  {},
-    "x86_64-unknown-linux-musl-static":   {},
-  }.freeze
+    "aarch64-unknown-linux-musl-static": {},
+    "x86_64-apple-darwin": {},
+    "x86_64-pc-windows-gnu": {},
+    "x86_64-unknown-linux-gnu": {},
+    "x86_64-unknown-linux-musl-dynamic": {},
+    "x86_64-unknown-linux-musl-static": {}
+  }
 
   def target_triple
     cpu = Hardware::CPU.arm? ? "aarch64" : "x86_64"
@@ -52,10 +52,18 @@ class Aiken < Formula
   end
 
   def install
-    bin.install "aiken" if OS.mac? && Hardware::CPU.arm?
-    bin.install "aiken" if OS.mac? && Hardware::CPU.intel?
-    bin.install "aiken" if OS.linux? && Hardware::CPU.arm?
-    bin.install "aiken" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "aiken"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "aiken"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "aiken"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "aiken"
+    end
 
     install_binary_aliases!
 
